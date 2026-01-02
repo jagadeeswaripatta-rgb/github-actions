@@ -4,7 +4,9 @@ on: push
 jobs:
     first_job: 
         runs-on: ubuntu-latest
-        steps: 
+        steps:
+            - name: git checkout repo
+              run: actions/checkout@v4 
             - name: welcome msg
               run: echo "Hello"
             - name: list_files
